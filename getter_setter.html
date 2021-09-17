@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+                
+                var eng = $('input[type="text"]#eng').val();
+                var hindi = Number($('input[type="text"]#hindi').val());
+                var math = Number($('input[type="text"]#math').val());
+                var sst = Number($('input[type="text"]#sst').val());
+                var science = Number($('input[type="text"]#science').val());
+ 
+                console.log(eng)
+                var total = eng+hindi+math+sst+science;
+
+                $("#tot").attr("value",total)
+            })
+        })
+       
+    </script>
+</head>
+
+<body>
+    <h2>Getter and setter</h2>
+
+    <p>
+        <b>Hello guys</b>
+    </p>
+    <form id="fom">
+        English : <input type="number" name="eng"><br>
+        hindi : <input type="text" name="hindi"><br>
+        math : <input type="text" name="math"><br>
+        sst : <input type="text" name="sst"><br>
+        science : <input type="text" name="science"><br>
+
+        total : <input type="text" name="total" id="tot" value="">
+        percentage : <input type="text" name="percent">
+
+
+    </form>
+
+    <button id="btn">Click me</button>
+
+</body>
+
+</html>
